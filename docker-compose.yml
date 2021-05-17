@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: .
+    tty: true
+    stdin_open: true
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./app:/go/src/golang-rest-api-template
