@@ -2,10 +2,10 @@ version: '3'
 services:
   web:
     build: .
-    command: realize start --server
+    command: air -c .air.toml
     tty: true
     stdin_open: true
     ports:
       - '5001:5001'
     volumes:
-      - .:/go/src/golang-rest-api-template
+      - ./app:/go/src/golang-rest-api-template
