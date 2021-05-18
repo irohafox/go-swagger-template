@@ -9,3 +9,7 @@ services:
       - '5001:5001'
     volumes:
       - ./app:/go/src/golang-rest-api-template
+      - pkg:/go/pkg
+volumes:
+  pkg:
+    driver: local
