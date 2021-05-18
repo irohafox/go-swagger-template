@@ -1,9 +1,8 @@
 swagger: "2.0"
 info:
   version: "1.0.0"
-  title: "Swagger lob"
-  description: "A sample for LOB API"
-host: "localhost:8000"
+  title: "sample"
+host: "localhost:5001"
 basePath: "/api"
 schemes:
   - "http"
@@ -12,37 +11,9 @@ consumes:
 produces:
   - "application/json"
 paths:
-  /users:
-    post:
-      operationId: postUser
-      parameters:
-      - in: body
-        name: body
-        required: true
-        schema:
-          $ref: '#/definitions/User'
-      responses:
-        '201':
-          description: Created
-  /users/{id}:
+  /test:
     get:
-      operationId: getUserById
-      parameters:
-      - name: "id"
-        in: "path"
-        required: true
-        type: "string"
+      operationId: test
       responses:
         '200':
           description: Success
-          schema:
-            $ref: '#/definitions/User'
-definitions:
-  User:
-    type: object
-    properties:
-      id:
-        type: number
-        format: uint
-      name:
-        type: string

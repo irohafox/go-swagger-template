@@ -29,65 +29,19 @@ func init() {
   ],
   "swagger": "2.0",
   "info": {
-    "description": "A sample for LOB API",
-    "title": "Swagger lob",
+    "title": "sample",
     "version": "1.0.0"
   },
-  "host": "localhost:8000",
+  "host": "localhost:5001",
   "basePath": "/api",
   "paths": {
-    "/users": {
-      "post": {
-        "operationId": "postUser",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/User"
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          }
-        }
-      }
-    },
-    "/users/{id}": {
+    "/test": {
       "get": {
-        "operationId": "getUserById",
-        "parameters": [
-          {
-            "type": "string",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
+        "operationId": "test",
         "responses": {
           "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/User"
-            }
+            "description": "Success"
           }
-        }
-      }
-    }
-  },
-  "definitions": {
-    "User": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "number",
-          "format": "uint"
-        },
-        "name": {
-          "type": "string"
         }
       }
     }
@@ -105,65 +59,19 @@ func init() {
   ],
   "swagger": "2.0",
   "info": {
-    "description": "A sample for LOB API",
-    "title": "Swagger lob",
+    "title": "sample",
     "version": "1.0.0"
   },
-  "host": "localhost:8000",
+  "host": "localhost:5001",
   "basePath": "/api",
   "paths": {
-    "/users": {
-      "post": {
-        "operationId": "postUser",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/User"
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          }
-        }
-      }
-    },
-    "/users/{id}": {
+    "/test": {
       "get": {
-        "operationId": "getUserById",
-        "parameters": [
-          {
-            "type": "string",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
+        "operationId": "test",
         "responses": {
           "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/User"
-            }
+            "description": "Success"
           }
-        }
-      }
-    }
-  },
-  "definitions": {
-    "User": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "number",
-          "format": "uint"
-        },
-        "name": {
-          "type": "string"
         }
       }
     }

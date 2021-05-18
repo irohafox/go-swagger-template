@@ -13,13 +13,13 @@ import (
 	"golang-rest-api-template/app/restapi/operations"
 )
 
-//go:generate swagger generate server --target ../../golang-rest-api-template --name SwaggerLob --spec ../swagger.yaml --principal interface{}
+//go:generate swagger generate server --target ../../golang-rest-api-template --name Sample --spec ../swagger.yaml --principal interface{}
 
-func configureFlags(api *operations.SwaggerLobAPI) {
+func configureFlags(api *operations.SampleAPI) {
 	// api.CommandLineOptionsGroups = []swag.CommandLineOptionsGroup{ ... }
 }
 
-func configureAPI(api *operations.SwaggerLobAPI) http.Handler {
+func configureAPI(api *operations.SampleAPI) http.Handler {
 	// configure the api here
 	api.ServeError = errors.ServeError
 
@@ -37,14 +37,9 @@ func configureAPI(api *operations.SwaggerLobAPI) http.Handler {
 
 	api.JSONProducer = runtime.JSONProducer()
 
-	if api.GetUserByIDHandler == nil {
-		api.GetUserByIDHandler = operations.GetUserByIDHandlerFunc(func(params operations.GetUserByIDParams) middleware.Responder {
-			return middleware.NotImplemented("operation operations.GetUserByID has not yet been implemented")
-		})
-	}
-	if api.PostUserHandler == nil {
-		api.PostUserHandler = operations.PostUserHandlerFunc(func(params operations.PostUserParams) middleware.Responder {
-			return middleware.NotImplemented("operation operations.PostUser has not yet been implemented")
+	if api.TestHandler == nil {
+		api.TestHandler = operations.TestHandlerFunc(func(params operations.TestParams) middleware.Responder {
+			return middleware.NotImplemented("operation operations.Test has not yet been implemented")
 		})
 	}
 

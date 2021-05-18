@@ -2,8 +2,8 @@ root = "."
 tmp_dir = "tmp"
 
 [build]
-  bin = "./tmp/main"
-  cmd = "go build -o ./tmp/main ./cmd/swagger-lob-server"
+  bin = "./tmp/main --host 0.0.0.0 --port 5001"
+  cmd = "go build -o ./tmp/main ./cmd/sample-server"
   delay = 1000
   exclude_dir = ["assets", "tmp", "vendor"]
   exclude_file = []
