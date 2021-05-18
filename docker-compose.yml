@@ -2,9 +2,10 @@ version: '3'
 services:
   web:
     build: .
+    command: realize start --server
     tty: true
     stdin_open: true
     ports:
-      - '8080:8080'
+      - '5001:5001'
     volumes:
-      - ./app:/go/src/golang-rest-api-template
+      - .:/go/src/golang-rest-api-template
