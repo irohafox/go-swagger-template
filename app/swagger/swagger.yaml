@@ -19,4 +19,4 @@ paths:
           description: Success
           schema:
             type: string
-            description: contains the actual greeting as plain text
+            description: test

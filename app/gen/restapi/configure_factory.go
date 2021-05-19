@@ -8,9 +8,9 @@ import (
 
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
-	"github.com/go-openapi/runtime/middleware"
 
 	"golang-rest-api-template/app/gen/restapi/factory"
+	"golang-rest-api-template/app/gen/restapi/handler"
 )
 
 //go:generate swagger generate server --target ../../gen --name Factory --spec ../../swagger/swagger.yaml --api-package factory --principal interface{}
@@ -38,9 +38,7 @@ func configureAPI(api *factory.FactoryAPI) http.Handler {
 	api.JSONProducer = runtime.JSONProducer()
 
 	if api.TestHandler == nil {
-		api.TestHandler = factory.TestHandlerFunc(func(params factory.TestParams) middleware.Responder {
-			return middleware.NotImplemented("operation factory.Test has not yet been implemented")
-		})
+		api.TestHandler = factory.TestHandlerFunc(handler.Test)
 	}
 
 	api.PreServerShutdown = func() {}
