@@ -2,7 +2,7 @@
 
 ## Dockerコンテナ環境自動構築
 ```
-bin/bootstrap
+docker/bootstrap
 ```
 
 ## Dockerコンテナ起動
