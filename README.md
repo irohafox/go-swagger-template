@@ -1,5 +1,5 @@
-# swagger-go-template
-このリポジトリはgo/swagger-goを用いたWebAPI実装のベースとなる試験的なリポジトリです。
+# go-swagger-template
+このリポジトリはgo/go-swaggerを用いたWebAPI実装のベースとなる試験的なリポジトリです。
 
 ## TODO
 - [ ] swagger-ui
