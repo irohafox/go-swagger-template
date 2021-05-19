@@ -37,9 +37,8 @@ func configureAPI(api *factory.FactoryAPI) http.Handler {
 
 	api.JSONProducer = runtime.JSONProducer()
 
-	if api.TestHandler == nil {
-		api.TestHandler = factory.TestHandlerFunc(handler.Test)
-	}
+	// configure handers
+	api.TestHandler = factory.TestHandlerFunc(handler.Test)
 
 	api.PreServerShutdown = func() {}
 
