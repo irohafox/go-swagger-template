@@ -1,4 +1,4 @@
-# golang-rest-api-template
+# swagger-go-template
 このリポジトリはgo/swagger-goを用いたWebAPI実装のベースとなる試験的なリポジトリです。
 
 ## TODO
