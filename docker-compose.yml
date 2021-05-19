@@ -1,7 +1,9 @@
 version: '3'
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
     command: air -c .air.toml
     tty: true
     stdin_open: true
