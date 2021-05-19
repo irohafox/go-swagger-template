@@ -1,4 +1,10 @@
 # golang-rest-api-template
+このリポジトリはgo/swagger-goを用いたWebAPI実装のベースとなる試験的なリポジトリです。
+
+## TODO
+- [ ] swagger-ui
+- [ ] DB/ORM
+- [ ] token認証
 
 ## Dockerコンテナ環境自動構築
 ```
