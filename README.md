@@ -23,9 +23,9 @@ docker-compose up -d
 ## Swaggerコマンド集
 swagger.yamlのバリデーション
 ```
-docker-compose run --rm web swagger validate swagger.yaml
+docker-compose run --rm web swagger validate ./swagger/swagger.yaml
 ```
 swagger.yamlをベースとしたサーバサイドコード生成
 ```
-docker-compose run --rm web swagger generate server -f swagger.yaml
+docker-compose run --rm web swagger generate server -a factory -A factory -t gen -f ./swagger/swagger.yaml
 ```

@@ -10,16 +10,16 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/runtime/middleware"
 
-	"golang-rest-api-template/app/restapi/operations"
+	"golang-rest-api-template/app/gen/restapi/factory"
 )
 
-//go:generate swagger generate server --target ../../golang-rest-api-template --name Sample --spec ../swagger.yaml --principal interface{}
+//go:generate swagger generate server --target ../../gen --name Factory --spec ../../swagger/swagger.yaml --api-package factory --principal interface{}
 
-func configureFlags(api *operations.SampleAPI) {
+func configureFlags(api *factory.FactoryAPI) {
 	// api.CommandLineOptionsGroups = []swag.CommandLineOptionsGroup{ ... }
 }
 
-func configureAPI(api *operations.SampleAPI) http.Handler {
+func configureAPI(api *factory.FactoryAPI) http.Handler {
 	// configure the api here
 	api.ServeError = errors.ServeError
 
@@ -38,8 +38,8 @@ func configureAPI(api *operations.SampleAPI) http.Handler {
 	api.JSONProducer = runtime.JSONProducer()
 
 	if api.TestHandler == nil {
-		api.TestHandler = operations.TestHandlerFunc(func(params operations.TestParams) middleware.Responder {
-			return middleware.NotImplemented("operation operations.Test has not yet been implemented")
+		api.TestHandler = factory.TestHandlerFunc(func(params factory.TestParams) middleware.Responder {
+			return middleware.NotImplemented("operation factory.Test has not yet been implemented")
 		})
 	}
 

@@ -40,7 +40,11 @@ func init() {
         "operationId": "test",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "schema": {
+              "description": "contains the actual greeting as plain text",
+              "type": "string"
+            }
           }
         }
       }
@@ -70,7 +74,11 @@ func init() {
         "operationId": "test",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "schema": {
+              "description": "contains the actual greeting as plain text",
+              "type": "string"
+            }
           }
         }
       }
